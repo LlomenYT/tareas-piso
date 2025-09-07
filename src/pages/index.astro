@@ -1,9 +1,13 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Calendar from '../components/Calendar.astro';
+
+// Obtener parámetros de la URL
+const url = new URL(Astro.request.url);
+const month = url.searchParams.get('month') || new Date().getMonth().toString();
+const year = url.searchParams.get('year') || new Date().getFullYear().toString();
 ---
 
 <Layout title="Tareas del Hogar">
-
-    <Calendar />
+  <Calendar month={parseInt(month)} year={parseInt(year)} />
 </Layout>
