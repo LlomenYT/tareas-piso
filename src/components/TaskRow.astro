@@ -1,0 +1,24 @@
+---
+interface Props {
+  taskName: string;
+  taskIndex: number;
+  days: string[];
+}
+
+const { taskName, taskIndex, days } = Astro.props;
+const taskColors = ['task-1', 'task-2', 'task-3'];
+---
+
+<tr>
+  <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+    {taskName}
+  </td>
+  {days.map((_, dayIndex: number) => (
+    <td class="px-6 py-4 whitespace-nowrap">
+      <div 
+        class={`h-4 w-4 mx-auto rounded-full bg-${taskColors[taskIndex]}`}
+        title={`${taskName} - ${days[dayIndex]}`}
+      ></div>
+    </td>
+  ))}
+</tr>

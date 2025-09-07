@@ -1,0 +1,33 @@
+/* Estilos de Tailwind - Se cargan a través de la configuración de Astro */
+
+/* Estilos personalizados */
+:root {
+  --color-antonio: #EF4444;
+  --color-ruben: #10B981;
+  --color-carlos: #F59E0B;
+}
+
+/* Clases de utilidad */
+.bg-antonio { 
+  background-color: var(--color-antonio);
+  color: white;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  font-weight: 500;
+}
+
+.bg-ruben { 
+  background-color: var(--color-ruben);
+  color: white;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  font-weight: 500;
+}
+
+.bg-carlos { 
+  background-color: var(--color-carlos);
+  color: white;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  font-weight: 500;
+}
